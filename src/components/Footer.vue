@@ -57,22 +57,22 @@ const socialLinks = [
   {
     name: "GitHub",
     image: github,
-    link: "https://github.com/deepakmalakar",
+    link: "https://github.com/Dee-co",
   },
   {
     name: "LinkedIn",
     image: linkedin,
-    link: "https://linkedin.com/in/deepakmalakar",
+    link: "https://linkedin.com/in/deepak-malakar-6b5110219",
   },
   {
     name: "Facebook",
     image: facebook,
-    link: "https://facebook.com",
+    link: "https://facebook.com/deep.malakar.420693",
   },
   {
     name: "Instagram",
     image: instagram,
-    link: "https://instagram.com",
+    link: "https://www.instagram.com/deep____malakar/",
   },
 ];
 </script>

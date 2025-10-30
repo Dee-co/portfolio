@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center justify-center w-full min-h-screen  p-4">
+  <div class="flex flex-col items-center justify-center w-full ">
     <!-- Title -->
    <div class="mt-6 flex gap-4">
       <Button

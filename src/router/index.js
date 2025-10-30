@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
-// import Home from "../pages/Home.vue";
 import About from "../pages/About.vue";
 import Resume from "../pages/Resume.vue";
 import Project from "../pages/Project.vue";
 const Home = () => import('../pages/Home.vue')
+
 const routes = [
   { path: "/", name: "Home", component: Home },
   { path: "/about", name: "About", component: About },
@@ -16,7 +16,19 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
-    return { top: 0 };
+    // Simple and reliable scroll to top
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const main = document.querySelector('.mainScreen');
+        if (main) {
+           main.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+        resolve({ left: 0, top: 0 });
+      }, 50); // Shorter delay
+    });
   },
 });
 

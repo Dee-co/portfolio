@@ -86,16 +86,16 @@ const projects = reactive([
     name: "Socal App",
     image: "../../src/assets/images/socal.png",
     description:
-      "Socal is a society management app built with React Native and Firebase, helping residents and admins manage complaints, facilities, and community interactions efficiently. It simplifies daily operations and keeps neighborhoods connected in real-time.",
-    tech: ["React Native","Redux", "Node.js", "MongoDB", "Express"],
+      "Socal is a social networking app where users can share posts with images, like, comment, follow, and interact with others in real time. Built using React Native and Firebase, it delivers a smooth and engaging social experience with secure authentication and instant updates.",
+    tech: ["React Native", "Redux", "Node.js", "MongoDB", "Express"],
     live: null,
   },
   {
     name: "DineTime App",
     image: "../../src/assets/images/dineTime.png",
     description:
-      "DineTime is a dining and eCommerce app with smart locker integration for smooth booking, order pickup, and delivery experiences. Built with React Native, Firebase, and TailwindCSS, it makes dining seamless and convenient.",
-    tech: ["React Native","Redux", "Firebase", "TailwindCSS",],
+      "DineTime is a restaurant table booking app that allows users to reserve dining slots at their favorite hotels and restaurants. Developed with React Native, Firebase, and TailwindCSS, it provides a seamless booking experience with real-time slot availability and confirmation.",
+    tech: ["React Native", "Redux", "Firebase", "TailwindCSS"],
     live: null,
   },
 ]);

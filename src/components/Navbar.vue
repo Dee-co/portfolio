@@ -6,9 +6,9 @@
       <!-- Logo / Name -->
       <RouterLink
         to="/"
-        class="text-2xl font-semibold text-white tracking-wide"
+        class="text-2xl font-semibold text-purple-500 tracking-wide"
       >
-        Deepak
+        Dm.
       </RouterLink>
 
       <!-- Desktop Menu -->
@@ -73,8 +73,9 @@
         class="md:hidden bg-white/10 backdrop-blur-md border-t border-white/20 text-white text-center py-4 space-y-3"
       >
       <RouterLink  v-for="route in routers"
+      v-slot="{ isActive }"
           :key="route.name" :to="route.path" class="block hover:text-emerald-400" @click="closeMenu">
-          <Text :style="{fontSize:'18px'}"> {{ route.name }}</Text>
+          <Text :style="{fontSize:'18px',color:isActive?colors.active:colors.deemActive}"> {{ route.name }}</Text>
           </RouterLink>
       </div>
     </transition>
