@@ -16,7 +16,7 @@ import colors from './utils/colors.js'
     <Navbar />
 
     <!-- Main content -->
-    <main class="flex-1 pt-20 px-6 mainScreen" :style="{ color: colors.text }">
+    <main class="flex-1 pt-20 mainScreen" :style="{ color: colors.text }">
       <RouterView />
       <!-- Footer inside scroll area -->
       <Footer />
