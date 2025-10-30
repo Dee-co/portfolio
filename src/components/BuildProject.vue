@@ -15,20 +15,24 @@
     <div
       v-for="(project, index) in projects"
       :key="index"
-      :class="[
-        'flex flex-col md:flex-row items-center justify-between gap-10 pb-12 px-4 md:px-12 rounded-2xl transition-all duration-700',
-      ]"
+      class="flex flex-col md:flex-row items-center justify-between gap-10 pb-12 px-4 md:px-12 rounded-2xl transition-all duration-700"
     >
-      <!-- Image -->
+      <!-- Image Section -->
       <div class="flex-1 flex justify-center items-center">
         <div
-          class="rounded-2xl overflow-hidden shadow-lg flex justify-center items-center bg-[#1a103a]/40 p-4"
+          class="rounded-2xl overflow-hidden shadow-lg flex justify-center items-center bg-[#1a103a]/40 p-4 relative"
           style="height: 350px; width: 100%; max-width: 350px"
         >
+          <!-- Loader -->
+          <div v-if="!imageLoaded[index]" class="loader"></div>
+
+          <!-- Image -->
           <img
             :src="project.image"
             :alt="project.name"
             class="h-full object-cover rounded-xl hover:scale-105 transition-transform duration-700"
+            @load="imageLoaded[index] = true"
+            v-show="imageLoaded[index]"
           />
         </div>
       </div>
@@ -69,9 +73,8 @@
   </section>
 </template>
 
-
 <script setup>
-import { reactive } from "vue";
+import { reactive, ref } from "vue";
 
 const projects = reactive([
   {
@@ -82,7 +85,6 @@ const projects = reactive([
     tech: ["Vue.js", "Vuetify", "Vuex", "TailwindCSS", "Node.js"],
     live: "https://bhuiyan-git-main-deepaks-projects-657c4b2e.vercel.app/",
   },
-
   {
     name: "Socal App",
     image: new URL("../assets/images/socal.png", import.meta.url).href,
@@ -100,7 +102,24 @@ const projects = reactive([
     live: null,
   },
 ]);
+
+const imageLoaded = ref(projects.map(() => false));
 </script>
 
 <style scoped>
+.loader {
+  position: absolute;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top: 4px solid #a855f7; /* purple color */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 </style>

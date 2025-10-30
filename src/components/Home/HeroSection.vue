@@ -12,15 +12,15 @@
         <!-- Left: Text -->
         <div class="flex flex-col w-full md:w-1/2 space-y-4">
           <Text
-            variant="body"
+            variant="h3"
             class="text-5xl md:text-6xl font-extrabold text-white tracking-tight text-center md:text-left"
           >
             Hi There! <span class="wave">👋🏻</span>
           </Text>
 
           <Text
-            variant="body"
-            class="text-white text-center md:text-left text-2xl md:text-3xl mt-3"
+            variant="h3"
+            class="text-white text-center md:text-left mt-3"
           >
             I'M
             <span :style="{ color: colors.active }" class="font-bold">
