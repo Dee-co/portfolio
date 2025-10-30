@@ -69,13 +69,14 @@
   </section>
 </template>
 
+
 <script setup>
 import { reactive } from "vue";
 
 const projects = reactive([
   {
     name: "Bhuyia — Buy Building, Home, Property",
-    image: "../../src/assets/images/bhuyia.png",
+    image: new URL("../assets/images/bhuyia.png", import.meta.url).href,
     description:
       "Bhuyia is a modern real estate platform designed for seamless property discovery and management. It enables users to buy, sell, and explore buildings, homes, and properties with an intuitive interface. Built with Vue.js and Node.js, it ensures smooth performance, responsive design, and efficient data handling for a superior user experience.",
     tech: ["Vue.js", "Vuetify", "Vuex", "TailwindCSS", "Node.js"],
@@ -84,7 +85,7 @@ const projects = reactive([
 
   {
     name: "Socal App",
-    image: "../../src/assets/images/socal.png",
+    image: new URL("../assets/images/socal.png", import.meta.url).href,
     description:
       "Socal is a social networking app where users can share posts with images, like, comment, follow, and interact with others in real time. Built using React Native and Firebase, it delivers a smooth and engaging social experience with secure authentication and instant updates.",
     tech: ["React Native", "Redux", "Node.js", "MongoDB", "Express"],
@@ -92,7 +93,7 @@ const projects = reactive([
   },
   {
     name: "DineTime App",
-    image: "../../src/assets/images/dineTime.png",
+    image: new URL("../assets/images/dineTime.png", import.meta.url).href,
     description:
       "DineTime is a restaurant table booking app that allows users to reserve dining slots at their favorite hotels and restaurants. Developed with React Native, Firebase, and TailwindCSS, it provides a seamless booking experience with real-time slot availability and confirmation.",
     tech: ["React Native", "Redux", "Firebase", "TailwindCSS"],
@@ -102,8 +103,4 @@ const projects = reactive([
 </script>
 
 <style scoped>
-/* section {
-  background: radial-gradient(circle at top, #0f0525, #050214);
-    index % 2 !== 0 ? 'md:flex-row-reverse bg-[#0c0720]/60' : 'bg-[#130c30]/60'
-} */
 </style>

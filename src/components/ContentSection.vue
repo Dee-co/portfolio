@@ -23,7 +23,7 @@
             class="flex flex-col items-center hover:scale-110 transition-transform duration-300"
           >
             <img
-              :src="`../../src/assets/images/${tech.icon}`"
+              :src="tech.icon"
               :alt="tech.name"
               class="w-14 h-14"
             />
@@ -36,25 +36,27 @@
 </template>
 
 <script setup>
-import Text from "./Text.vue";
-import colors from "../utils/colors.js";
 import { reactive } from "vue";
+
+// Helper function to resolve image paths properly
+const getImageUrl = (name) => new URL(`../assets/images/${name}`, import.meta.url).href;
+
 const techData = reactive([
-  { name: "Vue.js", icon: "vue.svg" },
-  { name: "React", icon: "react.svg" },
-  { name: "React Native", icon: "react.svg" },
-  { name: "JavaScript", icon: "js.svg" },
-  { name: "Quasar", icon: "quasar.svg" },
-  { name: "Vuetify", icon: "vuetify.svg" },
-  { name: "TailwindCSS", icon: "tailwind.svg" },
-  { name: "Bootstrap", icon: "bootstrap.svg" },
-  { name: "HTML5", icon: "html5.svg" },
-  { name: "CSS3", icon: "css.svg" },
-  { name: "Git", icon: "github.svg" },
-  { name: "Figma", icon: "figma.svg" },
-  { name: "AWS", icon: "aws.svg" },
-  { name: "Node.js", icon: "node.svg" },
-  { name: "MongoDB", icon: "mongodb.svg" },
+  { name: "Vue.js", icon: getImageUrl("vue.svg") },
+  { name: "React", icon: getImageUrl("react.svg") },
+  { name: "React Native", icon: getImageUrl("react.svg") },
+  { name: "JavaScript", icon: getImageUrl("js.svg") },
+  { name: "Quasar", icon: getImageUrl("quasar.svg") },
+  { name: "Vuetify", icon: getImageUrl("vuetify.svg") },
+  { name: "TailwindCSS", icon: getImageUrl("tailwind.svg") },
+  { name: "Bootstrap", icon: getImageUrl("bootstrap.svg") },
+  { name: "HTML5", icon: getImageUrl("html5.svg") },
+  { name: "CSS3", icon: getImageUrl("css.svg") },
+  { name: "Git", icon: getImageUrl("github.svg") },
+  { name: "Figma", icon: getImageUrl("figma.svg") },
+  { name: "AWS", icon: getImageUrl("aws.svg") },
+  { name: "Node.js", icon: getImageUrl("node.svg") },
+  { name: "MongoDB", icon: getImageUrl("mongodb.svg") },
 ]);
 </script>
 
