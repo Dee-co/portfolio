@@ -5,7 +5,6 @@
     <div
       class="max-w-6xl w-full flex flex-col items-center justify-center gap-16"
     >
-      <!-- Intro Section -->
       <section
         class="flex flex-col md:flex-row items-center justify-between gap-10 w-full"
       >
