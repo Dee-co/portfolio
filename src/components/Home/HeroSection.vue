@@ -8,7 +8,6 @@
       <section
         class="flex flex-col md:flex-row items-center justify-between gap-10 w-full"
       >
-        <!-- Left: Text -->
         <div class="flex flex-col w-full md:w-1/2 space-y-4">
           <Text
             variant="h3"
