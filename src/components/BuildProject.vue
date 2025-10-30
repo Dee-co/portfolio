@@ -21,7 +21,7 @@
       <div class="flex-1 flex justify-center items-center">
         <div
           class="rounded-2xl overflow-hidden shadow-lg flex justify-center items-center bg-[#1a103a]/40 p-4 relative"
-          style="height: 350px; width: 100%; max-width: 350px"
+          style="height: 350px; width: 100%; min-width:200px max-width: 350px"
         >
           <!-- Loader -->
           <div v-if="!imageLoaded[index]" class="loader"></div>
